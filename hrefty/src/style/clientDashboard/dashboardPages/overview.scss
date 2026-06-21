@@ -1,0 +1,267 @@
+$primaryColor: #088178;
+$secondaryColor: #4dc7b8;
+$secondaryHoverColor: #15696c;
+$titleColor: #1c797d;
+$textColor: #2f9d8d;
+$cardBackgroundColor: #e7e9f4;
+$backgroundColor: #f5f5f5;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.clientOverview {
+  .header {
+    margin: 2rem 3rem;
+    padding: 2rem 0 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: $cardBackgroundColor;
+    gap: 1rem;
+    position: relative;
+    h1 {
+      position: absolute;
+      top: -1rem;
+      background-color: $secondaryColor;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 20px;
+      right: 1rem;
+    }
+    .artisans {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      overflow-x: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      overflow-y: auto;
+      // height: calc(110px * 2 + 1rem);
+      padding: 1rem 2rem;
+      gap: 1rem;
+      .artisan::-webkit-scrollbar {
+        display: none;
+      }
+      .artisan {
+        border-radius: 1rem;
+        cursor: pointer;
+        background-color: $backgroundColor;
+        height: 110px;
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        align-items: center;
+        gap: 1rem;
+        button {
+          background-color: $secondaryColor !important;
+          color: white;
+          font-weight: 500;
+        }
+        img {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        ul {
+          flex-grow: 1;
+          li {
+            font-size: 18px;
+            span {
+              font-weight: bold;
+              color: $primaryColor;
+            }
+          }
+          list-style: none;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+  .statistics {
+    margin: 1rem 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: $cardBackgroundColor;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    p {
+      margin: 0;
+      color: $titleColor;
+      font-weight: 500;
+      font-size: 17px;
+    }
+  }
+  .demandesList {
+    background-color: $cardBackgroundColor;
+    position: relative;
+    padding: 3rem 1rem 1rem;
+    border-radius: 1rem;
+    margin: 1rem 3rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    .title {
+      position: absolute;
+      top: -1rem;
+      background-color: $secondaryColor;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 20px;
+      right: 1rem;
+    }
+    .demande {
+      background-color: $backgroundColor;
+      padding: 1rem;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      img {
+        width: 100%;
+        margin: auto;
+        border-radius: 10px;
+        height: 100%;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        align-items: start;
+        list-style: none;
+        margin: 0;
+        li {
+          width: 100%;
+          span {
+            color: $primaryColor;
+            font-weight: 500;
+          }
+          display: grid;
+          grid-template-columns: 1fr 3fr;
+          align-items: center;
+          gap: 10px;
+          text-align: start;
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+  .accordion {
+    border-radius: 1rem;
+    background-color: $cardBackgroundColor !important;
+    padding: 1rem !important;
+    margin: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .accordion-item {
+      border-radius: 10px !important;
+      .accordion-header {
+        .accordion-button {
+          border-radius: 10px !important;
+          transition: background-color 0.3s ease;
+          font-weight: 500 !important;
+          font-size: 18px;
+          color: $titleColor !important;
+          border-bottom: $cardBackgroundColor 1px solid;
+          &::after {
+            margin-left: 0 !important;
+          }
+          display: flex;
+          justify-content: space-between;
+          &:focus {
+            outline: none;
+            box-shadow: none;
+            background-color: $secondaryColor;
+          }
+        }
+      }
+      .accordion-collapse {
+        .accordion-body {
+          table {
+            .dropdown-menu.show.dropdown-menu-dark {
+              background-color: $primaryColor !important;
+              .dropdown-item {
+                &:hover {
+                  background: none !important;
+                }
+                .modal-header {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between !important;
+                  .btn-close {
+                    margin: auto !important;
+                  }
+                }
+              }
+            }
+            tr,
+            thead tr {
+              display: grid;
+              grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+            thead th {
+              background-color: $cardBackgroundColor !important;
+              color: $titleColor;
+            }
+            tbody td {
+              font-weight: 500;
+              font-size: 17px;
+            }
+            button {
+              border: none !important;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              background-color: $secondaryColor;
+              color: #fff;
+              font-weight: 500;
+              &:hover {
+                background-color: $secondaryHoverColor;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.modal-header {
+  justify-content: space-between !important;
+  color: $titleColor !important;
+  .btn-close {
+    margin: 0 !important;
+  }
+}
+.modal-body {
+  ul li {
+    font-weight: 500;
+    span {
+      color: $textColor;
+    }
+  }
+}
+.modal {
+  font-family: "Tajawal" !important;
+}
+.modal-footer {
+  button:nth-child(2) {
+    background-color: $secondaryColor;
+    border: none !important;
+    color: #fff;
+    &:hover {
+      background-color: $primaryColor;
+      color: #fff;
+    }
+  }
+}

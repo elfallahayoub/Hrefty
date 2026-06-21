@@ -1,0 +1,84 @@
+$primaryColor: #088178;
+$secondaryColor: #4dc7b8;
+$secondaryHoverColor: #15696c;
+$titleColor: #1c797d;
+$textColor: #2f9d8d;
+$cardBackgroundColor: #e7e9f4;
+$backgroundColor: #f5f5f5;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.demandes_offres {
+  font-family: 'Tajawal';
+  margin: 1rem 3rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  .demande {
+    background-color: $cardBackgroundColor;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+    .cols1 {
+      // height: 450px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: space-between;
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .info {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+        ul {
+          li {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            span {
+              color: $primaryColor;
+              font-weight: 600;
+            }
+          }
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+      }
+    }
+    .cols2 {
+      background-color: $backgroundColor;
+      // height: 450px;
+      padding: 1rem;
+      border-radius: 1rem;
+      overflow-x: hidden;
+      overflow-y: auto;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;
+    }
+    .cols2::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
+  }
+}
+// .modal-body {
+//   table {
+//     margin: 0;
+//     text-align: center;
+//   }
+//   margin: 1rem;
+//   border-radius: 1rem;
+//   background-color: $cardBackgroundColor;
+// }

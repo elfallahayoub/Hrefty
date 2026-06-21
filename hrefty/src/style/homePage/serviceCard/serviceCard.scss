@@ -1,0 +1,67 @@
+$primaryColor: #088178;
+$secondaryColor: #4dc7b8;
+$secondaryHoverColor: #15696c;
+$titleColor: #1c797d;
+$textColor: #2f9d8d;
+$cardBackgroundColor: #E7E9F4;
+$backgroundColor: #F5F5F5;
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.serviceCard{
+    display: flex;
+    flex-direction: column;
+    // border: 1px solid $primaryColor;
+    position: relative;
+    justify-content: center;
+    padding: 1.5rem 1rem 1rem;
+    border-radius: 1rem;
+    height: 200px;
+    background-color: $cardBackgroundColor;
+    .contentLeft{
+        img{
+            width: 150px;
+            border-radius: 1rem;
+        }
+        button{
+            align-self: flex-end;
+            color: $titleColor;
+            font-weight: 500;
+            background-color: $secondaryColor;
+            color: #fff;
+            box-sizing: border-box;
+            &:hover{
+                background-color: $secondaryHoverColor;
+            }
+        }
+        position: absolute;
+        top: -1rem;
+        left: -1rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+        gap: 1rem;
+    }
+    .contentRight{
+        p, span{
+            margin: 0;
+            color: $textColor;
+        }
+        p{
+        }
+        h1{
+            margin-top: 1.5rem;
+            color: $titleColor;
+            font-size: 30px;
+            white-space: nowrap;
+        }
+        height: 100%;
+    }
+}

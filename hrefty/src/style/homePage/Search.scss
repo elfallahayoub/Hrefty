@@ -1,0 +1,39 @@
+$primaryColor: #088178;
+$secondaryColor: #4dc7b8;
+$secondaryHoverColor: #15696c;
+$titleColor: #1c797d;
+$textColor: #2f9d8d;
+$cardBackgroundColor: #E7E9F4;
+$backgroundColor: #F5F5F5;
+$a3: #BCC0D3;
+$a4: #C9C9CA;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Search{
+    width: fit-content;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    display: flex;
+    gap: 1rem;
+    margin: 1rem auto;
+    background-color: $cardBackgroundColor;
+    input, select{
+      background-color: $cardBackgroundColor;
+      filter: brightness(0.9);
+      border: 2px solid $a3;
+      color: $titleColor;
+    }
+    .btn{
+      background-color: $secondaryColor;
+      color: #fff ;
+      &:hover{
+        background-color: $secondaryHoverColor;
+      }
+    }
+}
+

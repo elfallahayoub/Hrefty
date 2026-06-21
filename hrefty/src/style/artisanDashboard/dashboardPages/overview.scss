@@ -1,0 +1,228 @@
+$primaryColor: #088178;
+$secondaryColor: #4dc7b8;
+$secondaryHoverColor: #15696c;
+$titleColor: #1c797d;
+$textColor: #2f9d8d;
+$cardBackgroundColor: #e7e9f4;
+$backgroundColor: #f5f5f5;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.artisanOverview {
+  padding: 0 !important;
+  margin: 0 !important;
+
+  .header {
+    margin: 2rem 3rem;
+    padding:1rem;
+    position: relative;
+    border-radius: 1rem;
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 3fr;
+    background-color: $cardBackgroundColor;
+    .profile {
+      display: flex;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      padding: 10px 0;
+      border-radius: 1rem;
+      flex-direction: column;
+      background-color: $backgroundColor;
+      gap: 1rem;
+      // height: 80%;
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: auto;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 17px;
+        li {
+          margin: 5px 0;
+          font-size: 18px;
+          .icon {
+            color: $primaryColor;
+          }
+          .icon-actif {
+            color: green;
+          }
+          .icon-inactif {
+            color: red;
+          }
+        }
+        .stars {
+          color: $primaryColor;
+        }
+      }
+    }
+    .statistiques {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      .row {
+        background-color: $secondaryColor;
+        border-radius: 1rem;
+        width: 100%;
+        padding: 1rem;
+        white-space: nowrap;
+        color: white;
+        font-weight: 500;
+        p {
+          margin: 0;
+          padding: 0;
+          text-align: center;
+        }
+      }
+    }
+    .header-left {
+      padding: 2rem 0 1rem;
+      .title-left,
+      .title-right {
+        position: absolute;
+        top: -1rem;
+        background-color: $secondaryColor;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+      .title-left {
+        left: 1rem;
+      }
+      .title-right {
+        right: 1rem;
+      }
+      .demandesAccept {
+        display: flex;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        overflow-y: hidden;
+        direction: ltr;
+        flex-wrap: nowrap;
+        .demande::-webkit-scrollbar {
+          display: none;
+        }
+        .demande {
+          background-color: $backgroundColor;
+          box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px,
+            rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px,
+            rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
+            rgba(42, 51, 70, 0.04) 0px 6px 6px -3px,
+            rgba(14, 63, 126, 0.04) 0px 12px 12px -6px,
+            rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
+          margin: 1rem 0 1rem 1rem;
+          border-radius: 1rem;
+          flex: 0 0 auto;
+          width: calc((100% - 2rem) / 3);
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          justify-content: space-between;
+          align-items: center;
+          button {
+            background-color: $secondaryColor !important;
+            color: white;
+            font-weight: 500;
+          }
+          ul {
+            li {
+              span {
+                font-weight: bold;
+              }
+              img {
+                width: 100%;
+                margin-bottom: 1rem;
+                border-radius: 10px;
+              }
+            }
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  .orderList {
+    position: relative;
+    margin: 2rem 3rem;
+    padding: 3rem 1rem 1rem;
+    background-color: $cardBackgroundColor;
+    border-radius: 1rem;
+    .title {
+      position: absolute;
+      top: -1rem;
+      background-color: $secondaryColor;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 20px;
+    }
+    table {
+      margin: 0 !important;
+      tbody {
+        tr {
+          td {
+            height: 30px;
+            line-height: 30px;
+            align-items: center;
+          }
+        }
+      }
+    }
+    button {
+      background-color: $secondaryColor !important;
+      color: white;
+      font-weight: 500;
+    }
+  }
+}
+.modal-header {
+  justify-content: space-between !important;
+  color: $titleColor !important;
+  .btn-close {
+    margin: 0 !important;
+  }
+}
+.modal-body {
+  // .clientInfo {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      font-weight: 500;
+      border-bottom: 1px solid silver;
+      padding: 10px;
+      span {
+        color: $primaryColor;
+      }
+    }
+  }
+}
+.modal {
+  font-family: "Tajawal" !important;
+}
+.modal-footer {
+  button:nth-child(2) {
+    background-color: $secondaryColor;
+    border: none !important;
+    color: #fff;
+    &:hover {
+      background-color: $primaryColor;
+      color: #fff;
+    }
+  }
+}

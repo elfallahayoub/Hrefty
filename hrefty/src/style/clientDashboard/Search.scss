@@ -1,0 +1,29 @@
+$primaryColor: #088178;
+$secondaryColor: #4dc7b8;
+$secondaryHoverColor: #15696c;
+$titleColor: #1c797d;
+$textColor: #2f9d8d;
+$cardBackgroundColor: #E7E9F4;
+$backgroundColor: #F5F5F5;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.dashboardSearch{
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 3rem;
+    background-color: $cardBackgroundColor;
+    border-radius: 1rem;
+    margin: 1rem 3rem;
+    button{
+        background-color: $secondaryColor;
+        color: #fff;
+        font-weight: 500;
+        &:hover{
+            background-color: $primaryColor;
+            color: #fff;
+        }
+    }
+}

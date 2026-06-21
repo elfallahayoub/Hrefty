@@ -1,0 +1,17 @@
+$primaryColor: #088178;
+$secondaryColor: #4dc7b8;
+$secondaryHoverColor: #15696c;
+$titleColor: #1c797d;
+$textColor: #2f9d8d;
+$cardBackgroundColor: #E7E9F4;
+$backgroundColor: #F5F5F5;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.clientDashboard{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}

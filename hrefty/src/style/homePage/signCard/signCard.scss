@@ -1,0 +1,63 @@
+$primaryColor: #088178;
+$secondaryColor: #4dc7b8;
+$secondaryHoverColor: #15696c;
+$titleColor: #1c797d;
+$textColor: #2f9d8d;
+$cardBackgroundColor: #E7E9F4;
+$backgroundColor: #F5F5F5;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.signCard{
+    position: relative;
+    border: 1px solid $primaryColor;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: $cardBackgroundColor;
+    img{
+        position: absolute;
+        left: -2rem;
+        top: -2rem;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+    .signCardContent{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: space-between;
+        height: 100%;
+        color: $textColor;
+        .title{
+            font-size: 30px;
+            color: $titleColor !important;
+            font-weight: 600;
+        }
+        .paragraph{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0;
+            width: 75%;
+        }
+        button{
+            align-self: flex-end;
+            color: $titleColor;
+            font-weight: 500;
+            background-color: $secondaryColor ;
+            color: #fff;
+            border: none;
+            box-sizing: border-box;
+            width: 150px;
+            &:hover{
+                background-color: $secondaryHoverColor;
+            }
+        }
+    }
+}

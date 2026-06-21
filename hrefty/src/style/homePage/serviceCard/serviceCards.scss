@@ -1,0 +1,41 @@
+$primaryColor: #088178;
+$secondaryColor: #4dc7b8;
+$secondaryHoverColor: #15696c;
+$titleColor: #1c797d;
+$textColor: #2f9d8d;
+$cardBackgroundColor: #E7E9F4;
+$backgroundColor: #F5F5F5;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.serviceCards{
+    padding: 3rem 6rem;
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .pagination{
+        gap: 1rem;
+        background-color: $cardBackgroundColor;
+        width: fit-content;
+        padding: .5rem;
+        margin: 1rem auto;
+        border-radius: 1rem;
+        li:not(.active){
+            color: $textColor;
+            a{
+                color: $textColor;
+                text-decoration: none;
+            }
+        }
+        .active{
+            color: $titleColor;
+        }
+    }
+}

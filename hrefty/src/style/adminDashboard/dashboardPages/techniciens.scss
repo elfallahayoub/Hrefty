@@ -1,0 +1,64 @@
+$primaryColor: #088178;
+$secondaryColor: #4dc7b8;
+$secondaryHoverColor: #15696c;
+$titleColor: #1c797d;
+$textColor: #2f9d8d;
+$cardBackgroundColor: #e7e9f4;
+$backgroundColor: #f5f5f5;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.techniciens {
+  background-color: $cardBackgroundColor;
+  font-family: 'Tajawal';
+  margin: 1rem 3rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  .technicien {
+    border-radius: 1rem;
+    background-color: $backgroundColor;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    .cols1 {
+      display: flex;
+      gap: 1rem;
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+    .cols2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-grow: 1;
+      align-items: end;
+      .buttons {
+        display: flex;
+        gap: 1rem;
+      }
+      table {
+        margin: 0;
+        text-align: center;
+        thead tr th {
+          color: $primaryColor;
+        }
+        thead tr th,
+        tbody tr td {
+          padding: 10px 1rem;
+        }
+      }
+
+    }
+  }
+}

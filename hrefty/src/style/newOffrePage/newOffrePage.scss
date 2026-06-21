@@ -1,0 +1,72 @@
+$primaryColor: #088178;
+$secondaryColor: #4dc7b8;
+$secondaryHoverColor: #15696c;
+$titleColor: #1c797d;
+$textColor: #2f9d8d;
+$cardBackgroundColor: #E7E9F4;
+$backgroundColor: #F5F5F5;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.newDemandePage{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    .text{
+        text-align: center;
+        h1{
+            color: $titleColor;
+            font-weight: 500;
+            font-size: 40px;
+        }
+        p{
+            color: $textColor;
+            font-size: 20px;
+        }
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        .big-row{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+        .row{
+            padding: 1rem 3rem;
+            border-radius: 1rem;
+            background-color: $cardBackgroundColor;
+            label{
+                background: none !important;
+                border: none !important;
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+                font-size: 18px;
+                color: $titleColor;
+            }
+            input, textarea{
+                padding: 10px;
+                filter: brightness(.95);
+            }
+        }
+        button{
+            background-color: $secondaryColor;
+            width: fit-content;
+            margin: auto;
+            color: #fff;
+            font-weight: 500;
+            padding-right: 3rem;
+            padding-left: 3rem;
+            &:hover{
+                background-color: $secondaryHoverColor;
+                color: #fff;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+$primaryColor: #088178;
+$secondaryColor: #4dc7b8;
+$secondaryHoverColor: #15696c;
+$titleColor: #1c797d;
+$textColor: #2f9d8d;
+$cardBackgroundColor: #E7E9F4;
+$backgroundColor: #F5F5F5;
+
+.swiper {
+  width: 100%;
+  max-width: 1200px; // أو حسب تصميمك
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 1rem;
+.swiper-slide{
+  background: $cardBackgroundColor !important;
+  border-radius: 1rem;
+}
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // لإظهار الإعلان بدون فراغات
+    object-position: center; // تعديل حسب الحاجة: top / bottom / left / right
+    display: block;
+  }
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: $primaryColor !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $primaryColor !important;
+  }

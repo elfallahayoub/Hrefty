@@ -1,0 +1,70 @@
+$primaryColor: #088178;
+$secondaryColor: #4dc7b8;
+$secondaryHoverColor: #15696c;
+$titleColor: #1c797d;
+$textColor: #2f9d8d;
+$cardBackgroundColor: #E7E9F4;
+$backgroundColor: #F5F5F5;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.artisan{
+    background-color: $cardBackgroundColor;
+    border-radius: 1rem;
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    height: 200px;
+    img{
+        width: 100%;
+        height: calc(200px - 2rem);
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        *{
+            margin: 0;
+        }
+        .title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p{
+                background-color: $primaryColor;
+                color: #fff;
+                padding: 10px;
+                border-radius: 10px;
+                font-size: 10px;
+                font-weight: 500;
+            }
+            h1{
+                font-size: 25px;
+                color: $titleColor;
+                font-weight: 600;
+            }
+        }
+        .datecreation{
+            font-size: 12px;
+            color: $textColor;
+        }
+        .description{
+            margin: 1rem 0;
+            color: $textColor;
+        }
+        button{
+            background-color: $secondaryColor;
+            color: #fff;
+            align-self: flex-end;
+            font-weight: 500;
+            &:hover{
+                background-color: $primaryColor;
+            }
+        }
+    }
+}

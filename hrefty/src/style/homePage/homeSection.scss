@@ -1,0 +1,41 @@
+$primaryColor: #088178;
+$secondaryColor: #4dc7b8;
+$secondaryHoverColor: #15696c;
+$titleColor: #1c797d;
+$textColor: #2f9d8d;
+$cardBackgroundColor: #E7E9F4;
+$backgroundColor: #F5F5F5;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.homeSection{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: $backgroundColor;
+    gap: 5rem;
+    padding: 3rem 6rem;
+    align-items: center;
+    .aboutContent{
+        display: flex;
+        flex-direction: column;
+        button{
+            background-color: $secondaryColor;
+            color: #fff;
+            align-self: flex-end;
+            &:hover{
+                background-color: $secondaryHoverColor;
+            }
+        }
+        h1{
+            color: $titleColor;
+            font-weight: 500;
+        }
+        p{
+            color: $textColor;
+        }
+    }
+}

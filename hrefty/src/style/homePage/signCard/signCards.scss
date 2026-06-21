@@ -1,0 +1,62 @@
+$primaryColor: #088178;
+$secondaryColor: #4dc7b8;
+$secondaryHoverColor: #15696c;
+$titleColor: #1c797d;
+$textColor: #2f9d8d;
+$cardBackgroundColor: #E7E9F4;
+$backgroundColor: #F5F5F5;
+.signCards{
+    display: flex;
+    flex-direction: column;
+    background-color: $primaryColor;
+    justify-content: space-between;
+    gap: 3rem;
+    height: calc(100vh - 70px);
+    padding: 3rem 6rem;
+    .signCardsTop{
+      text-align: center;
+      h1{
+        color: #fff;
+        font-weight: 500;
+        font-size: 40px;
+      }
+      p{
+        color: $secondaryColor;
+        font-weight: 500;
+        font-size: 20px;
+      }
+    }
+    .signCardsBottom{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+}
+/* App.css */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination .active {
+    font-weight: bold;
+  }
+  
+  .pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+  }
+   

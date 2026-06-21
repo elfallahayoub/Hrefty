@@ -1,0 +1,61 @@
+$primaryColor: #088178;
+$secondaryColor: #4dc7b8;
+$secondaryHoverColor: #15696c;
+$titleColor: #1c797d;
+$textColor: #2f9d8d;
+$cardBackgroundColor: #E7E9F4;
+$backgroundColor: #F5F5F5;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Feature{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .span{
+        position: relative;
+        .sp1{
+            margin: 1rem 0;
+            background-color: $secondaryColor;
+            padding: 1rem;
+            border-radius: 50%;
+            width: 75px;
+            height: 75px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            color: #fff;
+        }
+        .sp2{
+            position: absolute;
+            background-color: $cardBackgroundColor;
+            color: $secondaryColor;
+            border: 2px solid $primaryColor;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            right: 0;
+        }
+    }
+    h1{
+        color: $titleColor;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    p{
+        color: #fff !important;
+        font-size: 13px;
+        line-height: 1.5rem;
+    }
+}
